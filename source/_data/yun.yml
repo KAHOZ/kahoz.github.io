@@ -1,67 +1,58 @@
 mode: auto
 
 avatar:
-  url: https://kaho.top/images/touxiang.jpg
+  enable: true
+  url: /images/avatar.JPG
+  rounded: true
+  opacity: 1
+  mickey_mouse: true
   status:
     enable: true
-    emoji: 🌑
-    message: Looking for dawn.
+    emoji: ⭐
+    message: 12.18
 
-reward:
+banner:
   enable: true
-  comment: 我很可爱，请给我钱
+  title: KAHOの小站
+  src: /js/ui/banner.js
+  border: true
+  cloud:
+    enable: true
+    color: "white"
+  go_down:
+    enable: true
+    icon: icon-arrow-down-s-line
 
-comment:
-  tips:
-    - 如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/YunYouJun/yunyoujun.github.io/discussions" target="_blank">GitHub Discussions</a> 与我交流。
-
-waline:
+notice:
   enable: true
-  serverURL:
-  visitor: true
-  comment: true
-  avatarCDN:
-  placeholder: 填写邮箱，可以收到回复通知哦～
-  requiredFields: ["nick"]
+  content: 来自风平浪静的明天
 
-github_issues:
-  enable: false
+bg_image:
+  enable: true
+  # dark:
+  # blur: 30px # 设置背景模糊程度
+  opacity: 0.8
 
-github_discussions:
-  enable: false
-
-disqusjs:
-  enable: false
-  shortname: yunyoujun
-  apikey: ouoGQCaamOKdJgyZU5DKcpFnRIg3SNzvk0nwygPtlcTRJuE68c8igvrZGW4wAJoN
+search:
+  modal: true
+  dark_bg_image: xxx
+  # placeholder:
 
 footer:
-  since: 2016
+  since: 2021
   icon:
+    name: icon-cloud-line
+    animated: true
+    color: "#0078E7"
     url:
     title:
-  beian:
+  powered:
+    enable: false
+  live_time:
     enable: true
-    icp:
-  custom_text:
-
-engine_search:
-  enable: false
-
-google_analytics:
-  enable: true
-  id: UA-121354150-1
-
-google_adsense:
-  enable: true
-  client: ca-pub-2245427233262012
-
-post_edit:
-  enable: true
-  url: https://github.com/KAHOZ/kahoz.github.io/tree/hexo/source/
-
-albums:
-  enable: true
+    prefix: 本站已在时间里穿梭了
+    suffix:
+    start_time: "2021-03-01T00:00:00"
 
 girls:
   enable: true
@@ -82,35 +73,149 @@ tags:
   部落: "#DD306A"
   科幻: midnightblue
 
-categories:
-  云游的小视频: "#FB7299"
-
 pages:
-  - name: 我的小伙伴们
+  - name: 友人帐
     url: /links/
     icon: icon-genderless-line
     color: dodgerblue
-  - name: 喜欢的女孩子
-    url: /anime/
+  - name: 异世界
+    url: /girls/
     icon: icon-women-line
     color: hotpink
 
 menu:
+  home:
+    path: /
+    icon: icon-home-4-line
+  list:
+    - type: archives
+      path: /archives/
+      icon: icon-archive-line
+    - type: categories
+      path: /categories/
+      icon: icon-folder-2-line
+    - type: tags
+      path: /tags/
+      icon: icon-price-tag-3-line
   custom:
-    title: 留言板
-    path: /about/#comment
-    icon: icon-clipboard-line
+    title: 文档
+    path: https://kaho.top/
+    icon: icon-user-line
 
 cursor:
   enable: true
 
-baidu_push: true
-
-google_tagmanager:
-  enable: true
-  id: GTM-M9KWR9L
-
 say:
+  enable: false
   api: https://el-bot-api.vercel.app/api/words/young
   hitokoto:
     enable: false
+
+social:
+  - name: RSS
+    # set rss in your root config
+    # https://github.com/hexojs/hexo-generator-feed
+    link: # config.feed.path
+    icon: icon-rss-line
+    color: orange
+  - name: QQ
+    link: https://wpa.qq.com/msgrd?v=3&uin=910426929&site=qq&menu=yes
+    icon: icon-qq-line
+    color: "#12B7F5"
+  - name: GitHub
+    link: https://github.com/KAHOZ
+    icon: icon-github-line
+    color: "#181717"
+  - name: E-Mail
+    link: mailto:1607759830@qq.com
+    icon: icon-mail-line
+    color: "#8E71C1"
+  - name: 微博
+    link: https://weibo.com/KAHOZHONG
+    icon: icon-weibo-line
+    color: "#E6162D"
+  - name: 豆瓣
+    link:
+    icon: icon-douban-line
+    color: "#007722"
+  - name: 网易云音乐
+    link: https://music.163.com/#/user/home?id=438027285
+    icon: icon-netease-cloud-music-line
+    color: "#C10D0C"
+  - name: 知乎
+    link: https://www.zhihu.com/people/HeyLebron
+    icon: icon-zhihu-line
+    color: "#0084FF"
+  - name: 哔哩哔哩动画
+    link: https://space.bilibili.com/701182073
+    icon: icon-bilibili-line
+    color: "#FF8EB3"
+  - name: POPI
+    link:
+    icon: icon-questionnaire-line
+    color: "#525252"
+  - name: 微信公众号
+    link: #
+    icon: icon-wechat-2-line
+    color: "#1AAD19"
+  - name: Twitter
+    link: https://twitter.com/KAHO
+    icon: icon-twitter-line
+    color: "#1da1f2"
+  - name: Telegram
+    link:
+    icon: icon-telegram-line
+    color: "#0088CC"
+  - name: Telegram Channel
+    link:
+    icon: icon-telegram-fill
+    color: "#0088CC"
+  - name: Travelling
+    link: https://travellings.now.sh/
+    icon: icon-send-plane-2-line
+    color: black
+
+fireworks:
+  enable: false
+  colors:
+    - "102, 167, 221"
+    - "62, 131, 225"
+    - "33, 78, 194"
+
+comment:
+  enable: true
+
+wordcloud:
+  enable: true
+
+post_meta:
+  item_text: false
+  created_at: true
+  updated_at: true
+  categories: true
+  tags: true
+
+post_edit:
+  enable: false
+
+reward: true
+
+post_card:
+  opacity: 0.8
+
+categories:
+  日常: dimgray
+
+sidebar:
+  bg_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-1.jpg
+  bg_position: bottom 3rem center
+  tagcloud:
+    enable: false
+    amount: 20
+
+engine_search:
+  enable: false
+
+local_search:
+  enable: true
+  src: /js/search/local-search.js
