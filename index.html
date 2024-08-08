@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta>
   <title>dont lose your conf1dence</title>
   <link rel="manifest" href="/manifest.json">
@@ -93,31 +94,6 @@
           $activeTab.classList.remove('is-hidden');
         }
       }
-      function show_runtime() {
-        window.setTimeout("show_runtime()", 1000);
-        X = new Date("12/17/2021 00:00:00");
-        Y = new Date();
-        T = Y.getTime() - X.getTime();
-        M = 24 * 60 * 60 * 1000;
-        N = parseInt(Math.floor(T / M) / 365);
-        a = T / M;
-        A = Math.floor(a) - N * 365;
-        b = (a - A - 365) * 24;
-        B = Math.floor(b);
-        c = (b - B) * 60;
-        C = Math.floor((b - B) * 60);
-        runtime_span.innerHTML =
-          "本站已在无人知晓的地方存在了" +
-          N +
-          "年" +
-          A +
-          "天" +
-          B +
-          "小时" +
-          C +
-          "分";
-      }
-      show_runtime();
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
     })();
@@ -355,8 +331,7 @@
     <div class="container">
       <div class="level">
         <div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg"
-              alt="dont lose your conf1dence" height="28"></a><span id="runtime_span"
-            style="color:black;font-size:12px;"></span>
+              alt="dont lose your conf1dence" height="28"></a>
           <p class="is-size-7"><span>&copy; 2024 KAHOZHONG</span></p>
         </div>
         <div class="level-end">
